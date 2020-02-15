@@ -79,6 +79,7 @@
     (define search-layout
       (new horizontal-pane%
            [parent main-layout]))
+
     (define 查询结果表格
       (new list-box%
            [label "搜索结果"]
@@ -108,10 +109,26 @@
     ;;; 当前选择网站
     (define 已选择网站 #f)
 
+    (define (刷新搜索列表)
+      (define 歌曲列表 (搜索结果结构-歌曲列表 已保存搜索结果))
+      (let ([一列 (map (compose number->string
+                                歌曲结构-id)
+                       歌曲列表)]
+            [二列 (map 歌曲结构-名称 歌曲列表)]
+            [三列 (map (compose 专辑结构-名称
+                                歌曲结构-专辑)
+                       歌曲列表)]
+            [四列 (map (compose (λ (xs) (string-join xs "；"))
+                                (λ (xs) (map 歌手结构-名字 xs))
+                                歌曲结构-歌手列表)
+                       歌曲列表)])
+        (send 查询结果表格 set 一列 二列 三列 四列)))
+
     (define (查询歌曲列表 site 查询)
       (send 查询结果表格 set-label "开始搜索……")
-      (define 歌曲列表 (->搜索 site 查询))
-      (displayln 歌曲列表)
+      (define 搜索结果 (->搜索 site 查询))
+      (set! 已保存搜索结果 搜索结果)
+      (刷新搜索列表)
       (send 查询结果表格 set-label "搜索结果："))
 
     #|

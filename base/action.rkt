@@ -1,12 +1,14 @@
 #lang racket/base
 
 (require racket/generic
-         racket/gui)
+         racket/gui
+
+         "./error.rkt")
 
 (provide (all-defined-out))
 
 (define (尚未实现)
-  (message-box "不允许操作" "尚未为此网站实现该行为！"))
+  (发生错误 "尚未为此网站实现该行为！"))
 
 (define-generics Site
   (->搜索 Site)

@@ -17,6 +17,15 @@
     (type . "1")
     (limit . "30")))
 
+(define 歌曲url
+  (string->url "https://music.163.com/api/song/lyric"))
+
+(define 歌曲query
+  '((os . "osx")
+    (lv . "-1")
+    (kv . "-1")
+    (tv . "-1")))
+
 (define/contract (album->专辑 album)
   (-> jsexpr? 专辑结构?)
   (match album
@@ -53,7 +62,19 @@
             [query (cons `(s ., s) 查询query)]
             [url (struct-copy url 查询url [query query])]
             [port (get-pure-port url)])
-       (json->搜索结果 (read-json port))))])
+       (json->搜索结果 (read-json port))))
+
+   (define (->下载歌词 _ 歌曲)
+     (let* ([id (歌曲结构-id 歌曲)]
+            [id (number->string id)]
+            [query (cons `(id . ,id) 歌曲query)]
+            [url (struct-copy url 歌曲url [query query])]
+            [port (get-pure-port url)]
+            [json (read-json port)]
+            [lrc (hash-ref json 'lrc #f)]
+            [歌词 (and lrc (hash-ref lrc 'lyric #f))])
+       (close-input-port port)
+       歌词))])
 
 (module+ test
   (define in (open-input-file "./sample/neteast-search.json"))

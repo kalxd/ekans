@@ -1,21 +1,22 @@
 #lang racket/gui
 
-(require "./network/netease.rkt"
-         "./network/gen.rkt")
+(require "../base/main.rkt")
 
-(provide (all-defined-out))
+(provide viewer-dialog%)
 
-(define lyric-dialog%
+(define viewer-dialog%
   (class object%
-    (init song)
+    (init site
+          歌曲)
 
-    (define song-data song)
+    (define 当前site site)
+    (define 当前歌曲 歌曲)
 
     (define main-window
       (new dialog%
            [label "查看歌词"]))
 
-    (define lyric-edit
+    (define 歌词编辑器
       (new text-field%
          [parent main-window]
          [label #f]
@@ -38,33 +39,33 @@
     (new button%
          [parent bottom-layout]
          [label "保存"]
-         [callback (λ (_ __) (save-lyric))])
+         [callback (λ (_ __) (保存歌词))])
 
-    (define (init-dialog song)
-      (let* ([lrc (search-lyric (song-detail-id song))]
-             [msg (or lrc "无歌词")])
-        (send* lyric-edit
-          (set-label #f)
-          (set-value msg))))
-
-    (define (save-lyric)
-      (define save-path-file
+    (define (保存歌词)
+      (define 保存路径
         (put-file "保存歌词"
                   main-window
                   #f
-                  (song-detail-name song-data)
+                  (歌曲结构-名称 当前歌曲)
                   "lrc"
                   null
                   '(("所有文件" "*"))))
-      (when save-path-file
-        (define lrc (send lyric-edit get-value))
-        (display-to-file lrc save-path-file
+      (when 保存路径
+        (define lrc (send 歌词编辑器 get-value))
+        (display-to-file lrc 保存路径
                          #:mode 'text
                          #:exists 'truncate)
         (send main-window show #f)))
 
-    ;;; 初始化
-    (init-dialog song)
+    (define (初始化)
+      (define 歌词 (->下载歌词 当前site 当前歌曲))
+      (define 结果
+        (or 歌词 "无结果！"))
+      (send* 歌词编辑器
+        (set-label #f)
+        (set-value 结果)))
+
+    (初始化)
     (send main-window show #t)
 
     (super-new)))

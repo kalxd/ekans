@@ -1,7 +1,8 @@
 #lang racket/gui
 
 (require "../base/main.rkt"
-         "../site/main.rkt")
+         "../site/main.rkt"
+         "./viewer-dialog.rkt")
 
 (provide main-window%)
 
@@ -96,9 +97,12 @@
       (unless (empty? 一组选择)
         (let* ([位置 (car 一组选择)]
                [选择的歌曲 (list-ref (搜索结果结构-歌曲列表 已保存搜索结果)
-                                     位置)])
+                                     位置)]
+               [site (当前选择网站)])
           (when 选择的歌曲
-            (displayln 选择的歌曲)))))
+            (new viewer-dialog%
+                 [site site]
+                 [歌曲 选择的歌曲])))))
 
     (new button%
          [label "查看(&v)"]
@@ -144,10 +148,6 @@
       (send 查询结果表格 set-label "搜索结果："))
 
     #|
-    (define (show-lyric-dialog)
-      (let ([song (get-selected-song)])
-        (when song (new lyric-dialog% [song song]))))
-
     (define (download-music)
       (let ([song (get-selected-song)])
         (when song

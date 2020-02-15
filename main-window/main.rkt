@@ -64,9 +64,11 @@
 
     (define (点击搜索)
       (let ([歌曲 (send 歌曲编辑器 get-value)]
-            [歌手 (send 歌手编辑器 get-value)])
-        (define 查询 (查询结构 歌曲 歌手))
-        (displayln 查询)))
+            [歌手 (send 歌手编辑器 get-value)]
+            [网站 (send 网站选择器 get-string-selection)])
+        (let ([site (hash-ref site-hash (string->symbol 网站))]
+              [查询 (查询结构 歌曲 歌手)])
+          (查询歌曲列表 site 查询))))
 
     (new button%
          [label "搜索(&s)"]
@@ -77,7 +79,7 @@
     (define search-layout
       (new horizontal-pane%
            [parent main-layout]))
-    (define search-table
+    (define 查询结果表格
       (new list-box%
            [label "搜索结果"]
            [style '(column-headers single vertical-label)]
@@ -104,6 +106,11 @@
 
     ;;; 私有成员
     (define song-list-data empty)
+
+    (define (查询歌曲列表 site 查询)
+      (send 查询结果表格 set-label "开始搜索……")
+      (define 歌曲列表 (->搜索 site 查询))
+      (send 查询结果表格 set-label "搜索结果："))
 
     #|
     (define (get-selected-song)

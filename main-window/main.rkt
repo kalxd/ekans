@@ -93,16 +93,12 @@
            [stretchable-width #f]))
 
     (define (查看歌词)
-      (define 一组选择 (send 查询结果表格 get-selections))
-      (unless (empty? 一组选择)
-        (let* ([位置 (car 一组选择)]
-               [选择的歌曲 (list-ref (搜索结果结构-歌曲列表 已保存搜索结果)
-                                     位置)]
-               [site (当前选择网站)])
-          (when 选择的歌曲
-            (new viewer-dialog%
-                 [site site]
-                 [歌曲 选择的歌曲])))))
+      (let ([选择的歌曲 (当前选择歌曲)]
+            [site (当前选择网站)])
+        (when 选择的歌曲
+          (new viewer-dialog%
+               [site site]
+               [歌曲 选择的歌曲]))))
 
     (new button%
          [label "查看(&v)"]
@@ -124,6 +120,12 @@
       (let* ([sel (send 网站选择器 get-string-selection)]
              [sel (string->symbol sel)])
         (hash-ref site-hash sel)))
+
+    (define (当前选择歌曲)
+      (define 一组选择 (send 查询结果表格 get-selections))
+      (and (not (empty? 一组选择))
+           (let ([位置 (car 一组选择)])
+             (list-ref (搜索结果结构-歌曲列表 已保存搜索结果) 位置))))
 
     (define (刷新搜索列表)
       (define 歌曲列表 (搜索结果结构-歌曲列表 已保存搜索结果))

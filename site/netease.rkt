@@ -15,7 +15,7 @@
   '((csrf_token . #f)
     (offset . "0")
     (type . "1")
-    (limit . "20")))
+    (limit . "30")))
 
 (define/contract (album->专辑 album)
   (-> jsexpr? 专辑结构?)
@@ -47,7 +47,13 @@
 (struct site []
   #:methods gen:Site
   [(define (->搜索 _ 查询)
-     (displayln 查询))])
+     (let* ([查询歌曲 (查询结构-歌手 查询)]
+            [查询歌手 (查询结构-歌曲 查询)]
+            [s (format "~a+~a" 查询歌曲 查询歌手)]
+            [query (cons `(s ., s) 查询query)]
+            [url (struct-copy url 查询url [query query])]
+            [port (get-pure-port url)])
+       (json->搜索结果 (read-json port))))])
 
 (module+ test
   (define in (open-input-file "./sample/neteast-search.json"))

@@ -111,6 +111,7 @@
     (define (查询歌曲列表 site 查询)
       (send 查询结果表格 set-label "开始搜索……")
       (define 歌曲列表 (->搜索 site 查询))
+      (displayln 歌曲列表)
       (send 查询结果表格 set-label "搜索结果："))
 
     #|

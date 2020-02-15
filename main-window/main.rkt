@@ -14,6 +14,20 @@
            [min-width 600]
            [min-height 400]))
 
+    ;;; 点击的回调，忽略不必要参数，处理错误异常。
+    (define (try-click f)
+      (λ (_ __)
+        (with-handlers
+          ([错误? (λ (错误)
+                    (message-box "提示"
+                                 (错误-内容 错误)
+                                 main-window))]
+           [exn:fail? (λ (e)
+                        (message-box "错误！"
+                                     (exn-message e)
+                                     main-window))])
+          (f))))
+
     ;;; 主要布局
     (define main-layout
       (new vertical-pane%
@@ -27,12 +41,12 @@
            [alignment '(left center)]
            [stretchable-height #f]))
 
-    (define song-name-edit
+    (define 歌曲编辑器
       (new text-field%
-           [label "歌名"]
+           [label "歌曲"]
            [parent top-group-box]))
 
-    (define song-singer-edit
+    (define 歌手编辑器
       (new text-field%
            [label "歌手"]
            [parent top-group-box]))
@@ -41,16 +55,23 @@
       (new horizontal-pane%
            [parent top-group-box]))
 
-    (new choice%
+    (define 网站选择器
+      (new choice%
          [parent one-line-layout]
          [label "来源"]
          [choices (map symbol->string
-                       (hash-keys site-hash))])
+                       (hash-keys site-hash))]))
+
+    (define (点击搜索)
+      (let ([歌曲 (send 歌曲编辑器 get-value)]
+            [歌手 (send 歌手编辑器 get-value)])
+        (define 查询 (查询结构 歌曲 歌手))
+        (displayln 查询)))
 
     (new button%
          [label "搜索(&s)"]
          [parent one-line-layout]
-         [callback (λ (_ __) (void))])
+         [callback (try-click 点击搜索)])
 
     ;;; 结果区
     (define search-layout
@@ -81,7 +102,7 @@
 
     (super-new)
 
-    ;;; private data
+    ;;; 私有成员
     (define song-list-data empty)
 
     #|

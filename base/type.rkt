@@ -4,30 +4,32 @@
 
 (provide (all-defined-out))
 
-(struct 专辑结构 [id 名称]
+#| 网站返回结构 |#
+(define-struct/contract 专辑结构
+  ([id any/c]
+   [名称 string?])
   #:transparent)
 
-(define 专辑/c
-  (struct/c 专辑结构 any/c string?))
-
-(struct 歌手结构 [id 名字]
+(define-struct/contract 歌手结构
+  ([id any/c]
+   [名字 string?])
   #:transparent)
 
-(define 歌手/c
-  (struct/c 歌手结构 any/c string?))
-
-(struct 歌曲结构 [id 名称 歌手列表 专辑]
+(define-struct/contract 歌曲结构
+  ([id any/c]
+   [名称 string?]
+   [歌手列表 (listof 歌手结构?)]
+   [专辑 专辑结构?])
   #:transparent)
 
-(define 歌曲/c
-  (struct/c 歌曲结构
-            any/c
-            string?
-            (listof 歌手/c)
-            专辑/c))
-
-(struct 搜索结构 [歌曲列表]
+(define-struct/contract 搜索结果结构
+  ([歌曲列表 (listof 歌曲结构?)])
   #:transparent)
+#| 结束 |#
 
-(define 搜索/c
-  (struct/c 搜索结构 (listof 歌曲/c)))
+#| 用户输入 |#
+(define-struct/contract 查询结构
+  ([歌曲 string?]
+   [歌手 string?])
+  #:transparent)
+#| 结束 |#

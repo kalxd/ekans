@@ -101,14 +101,32 @@
                [歌曲 选择的歌曲]))))
 
     (new button%
-         [label "查看(&v)"]
+         [label "查看歌词(&v)"]
          [parent search-side-layout]
          [callback (try-click 查看歌词)])
 
+    (define (下载音乐)
+      (define 歌曲 (当前选择歌曲))
+      (when 歌曲
+        (let* ([保存文件名 (format "~a.mp3" (歌曲结构-名称 歌曲))]
+               [保存文件 (put-file "保存到……"
+                                   main-window
+                                   #f
+                                   保存文件名
+                                   "mp3"
+                                   null
+                                   '(("所有文件" "*")))])
+          (when 保存文件
+            (let* ([port (->下载歌曲 (当前选择网站) 歌曲)]
+                   [file-port (open-output-file 保存文件)])
+              (write-bytes (port->bytes port) file-port)
+              (close-input-port port)
+              (close-output-port file-port))))))
+
     (new button%
-         [label "下载音乐"]
+         [label "下载音乐(&d)"]
          [parent search-side-layout]
-         [callback (λ (_ __) (void))])
+         [callback (try-click 下载音乐)])
 
     (super-new)
 
@@ -149,22 +167,6 @@
       (刷新搜索列表)
       (send 查询结果表格 set-label "搜索结果："))
 
-    #|
-    (define (download-music)
-      (let ([song (get-selected-song)])
-        (when song
-          (let ([filename (format "~a.mp3" (song-detail-name song))]
-                [id (song-detail-id song)])
-            (define save-file
-              (put-file "保存位置"
-                        main-window
-                        #f
-                        filename
-                        "mp3"
-                        null
-                        '(("所有文件" "*"))))
-            (and save-file (download-netease-music id save-file))))))
-    |#
     (send main-window show #t)))
 
 (module+ test

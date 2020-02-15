@@ -74,7 +74,14 @@
             [lrc (hash-ref json 'lrc #f)]
             [歌词 (and lrc (hash-ref lrc 'lyric #f))])
        (close-input-port port)
-       歌词))])
+       歌词))
+
+   (define (->下载歌曲 _ 歌曲)
+     (let* ([id (歌曲结构-id 歌曲)]
+            [url (format "http://music.163.com/song/media/outer/url?id=~a.mp3" id)]
+            [url (string->url url)])
+       (get-pure-port url
+                      #:redirections 2)))])
 
 (module+ test
   (define in (open-input-file "./sample/neteast-search.json"))

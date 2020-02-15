@@ -104,8 +104,9 @@
 
     (super-new)
 
-    ;;; 私有成员
-    (define song-list-data empty)
+    (define 已保存搜索结果 empty)
+    ;;; 当前选择网站
+    (define 已选择网站 #f)
 
     (define (查询歌曲列表 site 查询)
       (send 查询结果表格 set-label "开始搜索……")

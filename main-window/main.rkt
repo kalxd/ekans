@@ -1,17 +1,16 @@
 #lang racket/gui
 
-(require "./network/netease.rkt"
-         "./network/gen.rkt"
-         "./lyric-dialog.rkt")
+(require "../base/main.rkt"
+         "../site/main.rkt")
 
-(provide (all-defined-out))
+(provide main-window%)
 
 (define main-window%
   (class object%
     ;;; 主窗口
     (define main-window
       (new frame%
-           [label "老子的歌词查找器"]
+           [label "白嫖歌词查找器"]
            [min-width 600]
            [min-height 400]))
 
@@ -45,12 +44,13 @@
     (new choice%
          [parent one-line-layout]
          [label "来源"]
-         [choices '("网易")])
+         [choices (map symbol->string
+                       (hash-keys site-hash))])
 
     (new button%
          [label "搜索(&s)"]
          [parent one-line-layout]
-         [callback (λ (_ __) (start-search))])
+         [callback (λ (_ __) (void))])
 
     ;;; 结果区
     (define search-layout
@@ -72,18 +72,19 @@
     (new button%
          [label "查看"]
          [parent search-side-layout]
-         [callback (λ (_ __) (show-lyric-dialog))])
+         [callback (λ (_ __) (void))])
 
     (new button%
          [label "下载音乐"]
          [parent search-side-layout]
-         [callback (λ (_ __) (download-music))])
+         [callback (λ (_ __) (void))])
 
     (super-new)
 
     ;;; private data
     (define song-list-data empty)
 
+    #|
     (define (get-selected-song)
       (let* ([s (send search-table get-selections)]
              [is-empty? (empty? s)])
@@ -125,7 +126,7 @@
                         null
                         '(("所有文件" "*"))))
             (and save-file (download-netease-music id save-file))))))
-
+    |#
     (send main-window show #t)))
 
 (module+ test

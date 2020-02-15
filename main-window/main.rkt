@@ -65,10 +65,8 @@
     (define (点击搜索)
       (let ([歌曲 (send 歌曲编辑器 get-value)]
             [歌手 (send 歌手编辑器 get-value)]
-            [网站 (send 网站选择器 get-string-selection)])
-        (let ([site (hash-ref site-hash (string->symbol 网站))]
-              [查询 (查询结构 歌曲 歌手)])
-          (查询歌曲列表 site 查询))))
+            [site (当前选择网站)])
+        (查询歌曲列表 site (查询结构 歌曲 歌手))))
 
     (new button%
          [label "搜索(&s)"]
@@ -114,9 +112,14 @@
 
     (super-new)
 
+    #| 私有成员 |#
     (define 已保存搜索结果 empty)
-    ;;; 当前选择网站
-    (define 已选择网站 #f)
+    #| 结束 |#
+
+    (define (当前选择网站)
+      (let* ([sel (send 网站选择器 get-string-selection)]
+             [sel (string->symbol sel)])
+        (hash-ref site-hash sel)))
 
     (define (刷新搜索列表)
       (define 歌曲列表 (搜索结果结构-歌曲列表 已保存搜索结果))
@@ -141,29 +144,6 @@
       (send 查询结果表格 set-label "搜索结果："))
 
     #|
-    (define (get-selected-song)
-      (let* ([s (send search-table get-selections)]
-             [is-empty? (empty? s)])
-        (and (not is-empty?)
-             (list-ref song-list-data (first s)))))
-
-    (define (refresh-table result)
-      (define-values (col1 col2 col3 col4)
-        (search-result->choice result))
-      (set! song-list-data (search-result-song-list result))
-      (send search-table set col1 col2 col3 col4))
-
-    (define (start-search)
-      (send search-table set-label "开始搜索......")
-      (let ([name (send song-name-edit get-value)]
-            [singer (send song-singer-edit get-value)])
-        (touch (future
-                (λ ()
-                  (define result (search-netease-web name singer))
-                  (and result (refresh-table result))
-                  (unless result (message-box "错误" "未找到歌曲")))))
-        (send search-table set-label "搜索结果")))
-
     (define (show-lyric-dialog)
       (let ([song (get-selected-song)])
         (when song (new lyric-dialog% [song song]))))

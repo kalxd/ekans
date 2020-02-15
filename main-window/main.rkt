@@ -93,10 +93,19 @@
            [parent search-layout]
            [stretchable-width #f]))
 
+    (define (查看歌词)
+      (define 一组选择 (send 查询结果表格 get-selections))
+      (unless (empty? 一组选择)
+        (let* ([位置 (car 一组选择)]
+               [选择的歌曲 (list-ref (搜索结果结构-歌曲列表 已保存搜索结果)
+                                     位置)])
+          (when 选择的歌曲
+            (displayln 选择的歌曲)))))
+
     (new button%
-         [label "查看"]
+         [label "查看(&v)"]
          [parent search-side-layout]
-         [callback (λ (_ __) (void))])
+         [callback (try-click 查看歌词)])
 
     (new button%
          [label "下载音乐"]

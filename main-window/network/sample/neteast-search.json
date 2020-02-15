@@ -1,0 +1,783 @@
+{
+  "result": {
+    "songs": [
+      {
+        "id": 4877167,
+        "name": "琴心",
+        "artists": [
+          {
+            "id": 5810,
+            "name": "徐嘉良",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          }
+        ],
+        "album": {
+          "id": 490047,
+          "name": "倩女幽魂 电视配乐原声带",
+          "artist": {
+            "id": 0,
+            "name": "",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          "publishTime": 1041350400004,
+          "size": 17,
+          "copyrightId": 428012,
+          "status": 1,
+          "picId": 28587302336696,
+          "mark": 0
+        },
+        "duration": 259108,
+        "copyrightId": 651012,
+        "status": 0,
+        "alias": [],
+        "rtype": 0,
+        "ftype": 0,
+        "mvid": 0,
+        "fee": 8,
+        "rUrl": null,
+        "mark": 0
+      },
+      {
+        "id": 29999385,
+        "name": "琴心",
+        "artists": [
+          {
+            "id": 1019047,
+            "name": "武聆音雄",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          }
+        ],
+        "album": {
+          "id": 3090470,
+          "name": "武侠音乐系列之淡淡幽思",
+          "artist": {
+            "id": 0,
+            "name": "",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          "publishTime": 1362672000007,
+          "size": 28,
+          "copyrightId": 0,
+          "status": 0,
+          "picId": 6665239489084608,
+          "mark": 0
+        },
+        "duration": 259500,
+        "copyrightId": 0,
+        "status": 0,
+        "alias": [],
+        "rtype": 0,
+        "ftype": 0,
+        "mvid": 0,
+        "fee": 0,
+        "rUrl": null,
+        "mark": 0
+      },
+      {
+        "id": 27808163,
+        "name": "琴心",
+        "artists": [
+          {
+            "id": 1019047,
+            "name": "武聆音雄",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          }
+        ],
+        "album": {
+          "id": 2681154,
+          "name": "武侠音乐系列之淡淡幽思（思念）",
+          "artist": {
+            "id": 0,
+            "name": "",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          "publishTime": 1253376000007,
+          "size": 39,
+          "copyrightId": 0,
+          "status": 0,
+          "picId": 5671280976177215,
+          "mark": 0
+        },
+        "duration": 259500,
+        "copyrightId": 0,
+        "status": 0,
+        "alias": [],
+        "rtype": 0,
+        "ftype": 0,
+        "mvid": 0,
+        "fee": 0,
+        "rUrl": null,
+        "mark": 0
+      },
+      {
+        "id": 29750885,
+        "name": "剑魄琴心",
+        "artists": [
+          {
+            "id": 6290,
+            "name": "音频怪物",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          }
+        ],
+        "album": {
+          "id": 3070459,
+          "name": "热门华语255",
+          "artist": {
+            "id": 0,
+            "name": "",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          "publishTime": 1388505600004,
+          "size": 118,
+          "copyrightId": 0,
+          "status": 2,
+          "picId": 3240260767930883,
+          "mark": 0
+        },
+        "duration": 83000,
+        "copyrightId": 0,
+        "status": 0,
+        "alias": [],
+        "rtype": 0,
+        "ftype": 0,
+        "mvid": 0,
+        "fee": 0,
+        "rUrl": null,
+        "mark": 524288
+      },
+      {
+        "id": 549326593,
+        "name": "【词策】《问酒令》———记墨洒琴心藏剑意",
+        "artists": [
+          {
+            "id": 12228683,
+            "name": "宗顺康",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          {
+            "id": 12085569,
+            "name": "李蚊香",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          {
+            "id": 29749976,
+            "name": "江南城",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          }
+        ],
+        "album": {
+          "id": 34811598,
+          "name": "剑网三相关",
+          "artist": {
+            "id": 0,
+            "name": "",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          "publishTime": 1470892157160,
+          "size": 11,
+          "copyrightId": 0,
+          "status": 1,
+          "picId": 16644407022007144,
+          "mark": 0
+        },
+        "duration": 255872,
+        "copyrightId": 0,
+        "status": 0,
+        "alias": [],
+        "rtype": 0,
+        "ftype": 0,
+        "mvid": 0,
+        "fee": 0,
+        "rUrl": null,
+        "mark": 0
+      },
+      {
+        "id": 31421715,
+        "name": "剑魄琴心",
+        "artists": [
+          {
+            "id": 7898,
+            "name": "HITA",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          {
+            "id": 1049264,
+            "name": "夏肉肉",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          }
+        ],
+        "album": {
+          "id": 3102682,
+          "name": "热门华语261",
+          "artist": {
+            "id": 0,
+            "name": "",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          "publishTime": 1388505600004,
+          "size": 63,
+          "copyrightId": 0,
+          "status": 2,
+          "picId": 7714173580661848,
+          "mark": 0
+        },
+        "duration": 254000,
+        "copyrightId": 0,
+        "status": 0,
+        "alias": [],
+        "rtype": 0,
+        "ftype": 0,
+        "mvid": 0,
+        "fee": 0,
+        "rUrl": null,
+        "mark": 0
+      },
+      {
+        "id": 300155,
+        "name": "琴心剑胆",
+        "artists": [
+          {
+            "id": 9624,
+            "name": "汪明荃",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          }
+        ],
+        "album": {
+          "id": 29747,
+          "name": "春残梦断",
+          "artist": {
+            "id": 0,
+            "name": "",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          "publishTime": 268675200007,
+          "size": 11,
+          "copyrightId": 0,
+          "status": 1,
+          "picId": 920291232449666,
+          "mark": 0
+        },
+        "duration": 180062,
+        "copyrightId": 0,
+        "status": 0,
+        "alias": [],
+        "rtype": 0,
+        "ftype": 0,
+        "mvid": 0,
+        "fee": 0,
+        "rUrl": null,
+        "mark": 0
+      },
+      {
+        "id": 467603286,
+        "name": "剑胆琴心-抒情主题音乐",
+        "artists": [
+          {
+            "id": 12063096,
+            "name": "橙光音乐",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          }
+        ],
+        "album": {
+          "id": 35301107,
+          "name": "剑胆琴心·橙光OST",
+          "artist": {
+            "id": 0,
+            "name": "",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          "publishTime": 1490254068225,
+          "size": 8,
+          "copyrightId": 0,
+          "status": 0,
+          "picId": 109951162883830510,
+          "mark": 0
+        },
+        "duration": 68982,
+        "copyrightId": 0,
+        "status": 0,
+        "alias": [],
+        "rtype": 0,
+        "ftype": 0,
+        "mvid": 0,
+        "fee": 0,
+        "rUrl": null,
+        "mark": 0
+      },
+      {
+        "id": 233753,
+        "name": "西厢记.琴心",
+        "artists": [
+          {
+            "id": 7749,
+            "name": "方亚芬",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          }
+        ],
+        "album": {
+          "id": 23469,
+          "name": "方亚芬越剧专辑",
+          "artist": {
+            "id": 0,
+            "name": "",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          "publishTime": 924105600000,
+          "size": 13,
+          "copyrightId": 0,
+          "status": 1,
+          "picId": 112150186034152,
+          "mark": 0
+        },
+        "duration": 246544,
+        "copyrightId": 14008,
+        "status": 0,
+        "alias": [],
+        "rtype": 0,
+        "ftype": 0,
+        "mvid": 0,
+        "fee": 0,
+        "rUrl": null,
+        "mark": 0
+      },
+      {
+        "id": 470399977,
+        "name": "剑魄琴心",
+        "artists": [
+          {
+            "id": 12395853,
+            "name": "卿雲",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          {
+            "id": 12125049,
+            "name": "初夏小溪",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          }
+        ],
+        "album": {
+          "id": 35345237,
+          "name": "剑魄琴心",
+          "artist": {
+            "id": 0,
+            "name": "",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          "publishTime": 1491372211355,
+          "size": 2,
+          "copyrightId": 0,
+          "status": 0,
+          "picId": 109951162895545840,
+          "mark": 0
+        },
+        "duration": 299810,
+        "copyrightId": 0,
+        "status": 0,
+        "alias": [],
+        "rtype": 0,
+        "ftype": 0,
+        "mvid": 0,
+        "fee": 0,
+        "rUrl": null,
+        "mark": 0
+      },
+      {
+        "id": 1353910466,
+        "name": "卢巧音-好心分手（咚鼓版）（秦Sir remix）",
+        "artists": [
+          {
+            "id": 30707481,
+            "name": "秦Sir",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          }
+        ],
+        "album": {
+          "id": 74978392,
+          "name": "抖音歌曲最新2019年热门推荐歌曲",
+          "artist": {
+            "id": 0,
+            "name": "",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          "publishTime": 1545902821340,
+          "size": 16,
+          "copyrightId": 0,
+          "status": 0,
+          "picId": 109951163849241660,
+          "mark": 0
+        },
+        "duration": 159253,
+        "copyrightId": 0,
+        "status": 0,
+        "alias": [],
+        "rtype": 0,
+        "ftype": 0,
+        "mvid": 0,
+        "fee": 0,
+        "rUrl": null,
+        "mark": 0
+      },
+      {
+        "id": 1371378638,
+        "name": "心安之处",
+        "artists": [
+          {
+            "id": 32527716,
+            "name": "秦霄贤",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          }
+        ],
+        "album": {
+          "id": 79755750,
+          "name": "心安之处",
+          "artist": {
+            "id": 0,
+            "name": "",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          "publishTime": 1560441600000,
+          "size": 0,
+          "copyrightId": 1416220,
+          "status": 0,
+          "picId": 109951164142122460,
+          "mark": 0
+        },
+        "duration": 222807,
+        "copyrightId": 1416220,
+        "status": 0,
+        "alias": [],
+        "rtype": 0,
+        "ftype": 0,
+        "mvid": 0,
+        "fee": 0,
+        "rUrl": null,
+        "mark": 0
+      },
+      {
+        "id": 1302427555,
+        "name": "剑胆琴心 (钢琴/小提琴)",
+        "artists": [
+          {
+            "id": 12702492,
+            "name": "许双海",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          }
+        ],
+        "album": {
+          "id": 72284660,
+          "name": "钢琴/小提琴",
+          "artist": {
+            "id": 0,
+            "name": "",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          "publishTime": 1373673600000,
+          "size": 20,
+          "copyrightId": 0,
+          "status": 0,
+          "picId": 109951163457252500,
+          "mark": 0
+        },
+        "duration": 163936,
+        "copyrightId": 0,
+        "status": 0,
+        "alias": [],
+        "rtype": 0,
+        "ftype": 0,
+        "mvid": 0,
+        "fee": 0,
+        "rUrl": null,
+        "mark": 0
+      },
+      {
+        "id": 502519870,
+        "name": "剑胆琴心（Cover 音频怪物 / HITA）",
+        "artists": [
+          {
+            "id": 12039093,
+            "name": "易羲",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          {
+            "id": 12156206,
+            "name": "二青",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          }
+        ],
+        "album": {
+          "id": 36074375,
+          "name": "剑胆琴心",
+          "artist": {
+            "id": 0,
+            "name": "",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          "publishTime": 1504008640855,
+          "size": 1,
+          "copyrightId": 0,
+          "status": 0,
+          "picId": 109951163014553600,
+          "mark": 0
+        },
+        "duration": 242446,
+        "copyrightId": 0,
+        "status": 0,
+        "alias": [],
+        "rtype": 0,
+        "ftype": 0,
+        "mvid": 0,
+        "fee": 0,
+        "rUrl": null,
+        "mark": 0
+      },
+      {
+        "id": 171569,
+        "name": "醉倒",
+        "artists": [
+          {
+            "id": 5796,
+            "name": "徐小明",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          }
+        ],
+        "album": {
+          "id": 17240,
+          "name": "剑胆琴心",
+          "artist": {
+            "id": 0,
+            "name": "",
+            "picUrl": null,
+            "alias": [],
+            "albumSize": 0,
+            "picId": 0,
+            "img1v1Url": "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "img1v1": 0,
+            "trans": null
+          },
+          "publishTime": 439056000000,
+          "size": 12,
+          "copyrightId": 0,
+          "status": 1,
+          "picId": 31885837220929,
+          "mark": 0
+        },
+        "duration": 138762,
+        "copyrightId": 0,
+        "status": 0,
+        "alias": [],
+        "rtype": 0,
+        "ftype": 0,
+        "mvid": 0,
+        "fee": 0,
+        "rUrl": null,
+        "mark": 0
+      }
+    ],
+    "songCount": 320
+  },
+  "code": 200
+}

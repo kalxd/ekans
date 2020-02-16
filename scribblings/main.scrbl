@@ -7,4 +7,6 @@
 
 歌词白嫖下载器
 
-待续……
+@include-section["install.scrbl"]
+@include-section["generic.scrbl"]
+@include-section["site.scrbl"]

@@ -147,7 +147,7 @@
 
     (define (刷新搜索列表)
       (define 歌曲列表 (搜索结果结构-歌曲列表 已保存搜索结果))
-      (let ([一列 (map (compose number->string
+      (let ([一列 (map (compose (λ (x) (format "~a" x))
                                 歌曲结构-id)
                        歌曲列表)]
             [二列 (map 歌曲结构-名称 歌曲列表)]

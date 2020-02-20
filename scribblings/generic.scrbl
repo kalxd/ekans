@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@require[@for-label[racket/base ekans]]
+@require[@for-label[racket/base ekans/base/type]]
 
 @title{网站抽象}
 

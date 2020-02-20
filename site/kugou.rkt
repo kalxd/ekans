@@ -14,6 +14,12 @@
   '((filter . "2")
     (platform . "WebFilter")))
 
+(define 歌曲url
+  (string->url "https://www.kugou.com/yy/index.php"))
+
+(define 歌曲query
+  '((r . "play/getdata")))
+
 (define/contract (json->歌手 json)
   (-> jsexpr? 歌手结构?)
   (let ([名字 (hash-ref json 'SingerName)])
@@ -46,6 +52,17 @@
             [json (read-json port)]
             [r (json->搜索结果 json)])
        (displayln url)
+       (close-input-port port)
+       r))
+
+   (define (->下载歌词 _ 歌曲)
+     (let* ([hash-id (歌曲结构-id 歌曲)]
+            [query (cons `(hash . hash-id) 歌曲query)]
+            [url (struct-copy url 歌曲url [query query])]
+            [port (get-pure-port url '("Cookie: kg_mid=123"))]
+            [json (read-json port)]
+            [data-json (hash-ref json 'data #f)]
+            [r (and data-json (hash-ref data-json #f))])
        (close-input-port port)
        r))])
 

@@ -14,12 +14,6 @@
   '((filter . "2")
     (platform . "WebFilter")))
 
-(define 歌曲url
-  (string->url "https://www.kugou.com/yy/index.php"))
-
-(define 歌曲query
-  '((r . "play/getdata")))
-
 (define/contract (json->歌手 json)
   (-> jsexpr? 歌手结构?)
   (let ([名字 (hash-ref json 'SingerName)])
@@ -40,6 +34,15 @@
          [歌手列表 (map json->歌曲 r)])
     (搜索结果结构 歌手列表)))
 
+(define/contract (获取歌曲详情 歌曲)
+  (-> 歌曲结构? jsexpr?)
+  (let* ([hash-id (歌曲结构-id 歌曲)]
+         [url (string->url (format "https://www.kugou.com/yy/index.php?r=play/getdata&hash=~a" hash-id))]
+         [port (get-pure-port url '("Cookie: kg_mid=123"))]
+         [json (read-json port)])
+    (close-input-port port)
+    json))
+
 (struct site []
   #:methods gen:Site
   [(define (->搜索 _ 查询)
@@ -51,20 +54,13 @@
             [port (get-pure-port url)]
             [json (read-json port)]
             [r (json->搜索结果 json)])
-       (displayln url)
        (close-input-port port)
        r))
 
    (define (->下载歌词 _ 歌曲)
-     (let* ([hash-id (歌曲结构-id 歌曲)]
-            [query (cons `(hash . hash-id) 歌曲query)]
-            [url (struct-copy url 歌曲url [query query])]
-            [port (get-pure-port url '("Cookie: kg_mid=123"))]
-            [json (read-json port)]
-            [data-json (hash-ref json 'data #f)]
-            [r (and data-json (hash-ref data-json #f))])
-       (close-input-port port)
-       r))])
+     (let* ([json (获取歌曲详情 歌曲)]
+            [data-json (hash-ref json 'data #f)])
+       (and data-json (hash-ref data-json 'lyrics #f))))])
 
 (module+ test
   (let* ([in (open-input-file "./sample/kugou/search.json")]

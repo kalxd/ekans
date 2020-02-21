@@ -60,7 +60,14 @@
    (define (->下载歌词 _ 歌曲)
      (let* ([json (获取歌曲详情 歌曲)]
             [data-json (hash-ref json 'data #f)])
-       (and data-json (hash-ref data-json 'lyrics #f))))])
+       (and data-json (hash-ref data-json 'lyrics #f))))
+
+   (define (->下载歌曲 _ 歌曲)
+     (let* ([json (获取歌曲详情 歌曲)]
+            [data-json (hash-ref json 'data)]
+            [r (hash-ref data-json 'play_url)]
+            [音乐链接 (string->url r)])
+       (get-pure-port 音乐链接)))])
 
 (module+ test
   (let* ([in (open-input-file "./sample/kugou/search.json")]

@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@require[@for-label[racket/base ekans/base/type]]
+@require[@for-label[racket ekans]]
 
 @title{网站抽象}
 
@@ -20,25 +20,25 @@
 
 @section{必要类型定义}
 
-@defstruct[专辑结构 ([id any/c] [名称 string?])]{
+@defstruct*[专辑结构 ([id any/c] [名称 string?])]{
 歌曲所在专辑。
 }
 
-@defstruct[歌手结构 ([id any/c] [名字 string?])]{
+@defstruct*[歌手结构 ([id any/c] [名字 string?])]{
 歌曲演唱者信息。
 }
 
-@defstruct[歌曲结构 ([id any/c] [名称 string?] [歌手列表 (listof 歌手结构?)] [专辑 专辑结构?])]{
+@defstruct*[歌曲结构 ([id any/c] [名称 string?] [歌手列表 (listof 歌手结构?)] [专辑 专辑结构?])]{
 一首歌曲所有信息。
 
 歌曲有可能由多位艺人演唱，故而是个列表。
 }
 
-@defstruct[搜索结果结构 ([歌曲列表 (listof 歌曲结构?)])]{
+@defstruct*[搜索结果结构 ([歌曲列表 (listof 歌曲结构?)])]{
 歌曲查询结果，不需要分页，取需要部分。
 }
 
-@defstruct[查询结构 ([歌曲 string?] [歌手 string?])]{
+@defstruct*[查询结构 ([歌曲 string?] [歌手 string?])]{
 这是用户查询输入，用户点击“搜索”时，会将该类型传到对应函数。
 }
 
